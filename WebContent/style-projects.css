@@ -1,0 +1,507 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Ebrima;
+    src: url(http://www.theamazingmonth.pusku.com/ebrima.ttf);
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family:  Ebrima, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    background-color: var(--main-bg-light);
+}
+
+.projects-div {
+    display: block;
+    position: relative;
+    top: 100px;
+    padding-left: 50px;
+    width: 850px;
+}
+
+.projects-div h1 {
+    position: relative;
+    font-size: 60px;
+    width: 1000px;
+    color: var(--main-text-light);
+}
+
+.size {
+    margin-top: 15px;
+    height: 730px;
+    width: 850px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: var(--scrollbar-light);
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: 12px;
+    background-color: transparent;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #8833a2;
+}
+
+.proj a{
+    color: var(--main-text-light);
+    cursor: pointer; 
+    width: 51%;
+    height: 20px;
+}
+
+.proj button {
+    border: 2px solid var(--dark-purp1);
+    background-color: transparent;
+    width: 55px;
+    height: 55px;
+    padding: 8px;
+    border-radius: 100px;
+    
+    
+    position: relative;
+    bottom: 100px;
+    right: 50px;
+    float: right;
+}
+
+.proj button i {
+    font-size: 30px;
+    color: var(--dark-purp1);
+}
+
+.proj button:hover {
+    transition: ease-in-out .2s;
+    filter: brightness(115%);
+    cursor: pointer;
+}
+
+.card {
+    position: relative;
+    margin: 20px 0;
+    width: 810px;
+    height: 105px;
+    border-radius: 20px;
+    background-color: var(--card-bg-light);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
+}
+
+.card div {
+    display: inline-block;
+}
+
+.project-color {
+    height: 65px;
+    width: 65px;
+
+    border-radius: 100px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.project-info h2 {
+    font-size: 40px;
+    margin-left: 50px;
+    font-weight: normal;
+}
+
+.button {
+    position: relative;
+    bottom: 100px;
+    right: 50px;
+    float: right;
+    position: relative;
+}
+
+.button input {
+    width: 55px;
+    height: 55px;
+}
+
+.options {
+    position: absolute;
+    top: 190px;
+    left: 950px;
+    width: 45%;
+    height: 100vh;
+}
+
+.interaction-option {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 19vh;
+    min-height: 160px;
+    padding: 10px 20px;
+    text-align: left;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.329);
+    text-decoration: none;
+    margin-bottom: 50px;
+    cursor: pointer;
+    color: var(--main-text-light);
+    top: 20px;
+}
+
+.interaction-option h2 {
+    position: relative;
+    margin-top: 10px;
+    font-weight: 500;
+    text-align: left;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.interaction-option p {
+    position: relative;
+    margin-top: 0.5vh;
+    font-weight: 500;
+    text-align: left;
+    font-size: 20px;
+}
+
+.interaction-option a {
+    position: relative;
+    text-align: center;
+    top: 12vh;
+}
+
+.create-new-display {
+    background-image: var(--new-proj);
+}
+
+.help-page-display {
+    background-image: var(--help-big);
+}
+
+.dark-mode-display{
+    background-image: var(--dark-light);
+    color: white;
+    margin-bottom: 0px;
+}
+
+.interaction-option:hover{
+    filter: brightness(115%);
+    transition: all .3s ease;
+}
+
+.create-new-display:hover{
+    filter: brightness(103%);
+    transition: all .3s ease;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: none; /* Enable scroll if needed */
+  }
+  
+  /* Modal Content/Box */
+.modal-content {
+    text-align: center;
+    justify-content: center;
+    background-color: var(--card-bg-light);
+    margin: 120px auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    width: 20%; /* Could be more or less, depending on screen size */
+    min-width: 300px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
+}
+
+.modal-content h2 {
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 45px;
+    font-size: 25px;
+    color: var(--main-text-light);
+}
+
+.error-msg{
+  margin: 20px;
+  word-wrap: break-word;
+  font-size: 0.75vw;
+  color: var(--main-subtext-light);
+  font-style: italic;
+  font-size: 15px;
+}
+  
+  /* The Close Button */
+.close {
+    color: var(--main-subtext-light);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--main-text-light);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.project-title-div input[type="text"] {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0.45rem 0;
+    text-align: center;
+    font-size: 15px;
+    border-bottom: 2px solid var(--extra-border1);
+    box-shadow: none;
+    color: var(--main-text-light);
+}
+
+.project-title-div label {
+    position: absolute;
+    left: -10px;
+    width: 100%;
+    color: var(--main-subtext-light);
+    cursor: text;
+    font-size: 20px;
+    transform: translate(0px, -38px);
+}
+
+.color-title {
+    font-size: 20px;
+    color: var(--main-subtext-light);
+    padding-bottom: 18px;
+}
+
+/* RADIO COLOR PICKER */
+
+.color-picker {
+    padding-top: 8px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+form input[type="radio"]:checked + label span {
+    transform: scale(1.25);
+    transform-origin: center;
+}
+
+input[type="radio"]:checked + label .yellow {
+    border: 3px solid #d0bc09;
+}
+
+input[type="radio"]:checked + label .light-green {
+    border: 3px solid #6d9d2c;
+}
+
+input[type="radio"]:checked + label .dark-green {
+    border: 3px solid #047c3e;
+}
+
+input[type="radio"]:checked + label .turquoise {
+    border: 3px solid #017e7f;
+}
+
+input[type="radio"]:checked + label .royal-blue {
+    border: 3px solid #026296;
+}
+
+input[type="radio"]:checked + label .dark-blue {
+    border: 3px solid #03447d;
+}
+
+input[type="radio"]:checked + label .purple {
+    border: 3px solid #531870;
+}
+
+input[type="radio"]:checked + label .pink {
+    border: 3px solid #a30f73;
+}
+
+input[type="radio"]:checked + label .red {
+    border: 3px solid #c60b12;
+}
+
+input[type="radio"]:checked + label .orange {
+    border: 3px solid #c14212;
+}
+
+input[type="radio"]:checked + label .lighter-orange {
+    border: 3px solid #c45f08;
+}
+
+input[type="radio"]:checked + label .orange-yellow {
+    border: 3px solid #c18801;
+}
+
+form label {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+label:hover span {
+    transform: scale(1.25);
+}
+
+label span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 100px;
+    box-sizing: border-box;
+}
+
+label span.yellow {
+    background: #ffe600;
+}
+
+label span.light-green {
+    background: #8cc63e;
+}
+
+label span.dark-green {
+    background: #00a550;
+}
+label span.turquoise {
+    background: #00aaac;
+}
+
+label span.royal-blue {
+    background: #0083ca;
+}
+
+label span.dark-blue {
+    background: #005aaa;
+}
+
+label span.purple {
+    background: #6f2b90;
+}
+
+label span.pink {
+    background: #c5168c;
+}
+
+label span.red {
+    background: #ed1c24;
+}
+
+label span.orange {
+    background: #f05a22;
+}
+
+label span.lighter-orange {
+    background: #f5821f;
+}
+
+label span.orange-yellow {
+    background: #fdb813;
+}
+
+.popup-buttons{
+    font-size: 90%;
+    font-weight: 700;
+    width: 40%;
+    margin: 5px 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    color: var(--main-subtext-light);
+}
+
+.popup-buttons:hover{
+    transition: ease-in-out .2s;
+    filter: brightness(90%);
+}
+  
+.confirm {
+    background-color: #8833a2;
+    color: white;
+}
+
+.modal-content input[type="text"]{
+    background-color: var(--card-bg-light);
+}
+  
+.modal-content input[type="reset"] {
+    background-color: var(--cancel-but);
+    color: var(--main-text-light);
+}
+
+.confirm:hover {
+    transition: ease-in-out .2s;
+    filter: brightness(110%);
+}
+
+@media screen and (max-width: 950px){
+    .popup-buttons {
+      font-size: 100%;
+    }
+}
+
+.project-title{
+    width: 595px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    position: relative;
+    top: 14px;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+@media screen and (min-height: 720px) {
+    .options {
+      height: 700px;
+    }
+
+    .size {
+        height: 730px;
+    }
+}
+
+.empty {
+    background-color: var(--nothing-bg);
+    position: relative;
+    left: 13px;
+    width: 95%;
+    height: 710px;
+    margin-top: 10px;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 19em;
+    color: var(--nothing-txt);
+    font-size: 20px;
+    font-style: oblique;
+    box-shadow: inset 0px -2px 22px -8px rgba(0, 0, 0, 0.219);
+}

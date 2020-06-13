@@ -1,0 +1,739 @@
+@font-face {
+    font-family: Ebrima;
+    src: url(http://www.theamazingmonth.pusku.com/ebrima.ttf);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Ebrima, Helvetica, Arial, sans-serif;
+}
+
+#white-bg {
+	height: 100vh;
+    width: 1152px;
+    background-color: var(--pem-white);
+}
+
+
+.top-bar {
+    position: absolute;
+    top: 72px;
+    width: 1152px;
+    height: 60px;
+    background-color: var(--white-top-bar);
+    box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.329);
+}
+
+#text-editor{
+    position: absolute;
+    top: 80px;
+}
+
+#text-editor div{
+    left: 20px;
+}
+
+.text-area{
+    width: 100%;
+}
+
+iframe{
+    position: absolute;
+    top: 260px;
+    width: 1152px;
+    height: 72vh;
+    outline: 0;
+    border: 0;
+    box-shadow: 0;
+    box-sizing: border-box;
+    border: 25px solid var(--pem-white);
+    background-color: var(--pem-white);
+    overflow-x: hidden;
+    word-wrap: break-word;
+}
+
+#text-editor button {
+    all: unset;
+    position: relative;
+    left: 10px;
+    font-size: 18px;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    padding: 5px;
+    line-height: 20px;
+    text-align: center;
+    background-color: var(--pem-text-emph-button-bg);
+    color: var(--pem-text-emph-button);
+    border-radius: 5px;
+    overflow-x: hidden;
+    /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329); */
+}
+
+.fcol {
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.split1 {
+    display: inline-block;
+}
+
+.split2 {
+    display: inline-block;
+    margin-left: 12px;
+}
+
+
+#text-editor button:hover, 
+#text-editor select:hover,
+#text-editor input[type="color"]:hover{
+    transition: ease-in-out .2s;
+    filter: brightness(90%);
+    cursor: pointer;
+}
+
+.typo-emph{
+    display: inline-block;
+}
+
+.div-section{
+    margin-left: 12px;
+}
+
+#arial {
+    font-family: "Arial";
+}
+
+#calibri {
+    font-family: "Calibri";
+}
+
+#comic-sans-ms {
+    font-family: "Comic Sans MS";
+}
+
+#courier {
+    font-family: "Courier";
+}
+
+#georgia {
+    font-family: "Georgia";
+}
+
+#helvetica {
+    font-family: "Helvetica";
+}
+
+#tahoma {
+    font-family: "Tahoma";
+}
+
+#times-new-roman {
+    font-family: "Times New Roman";
+}
+
+#verdana {
+    font-family: "Verdana";
+}
+
+.hilite input[type="color"] {
+    position: relative;
+    bottom: 1px;
+    background-color: var(--pem-text-emph-button-bg);
+    border: 0;
+    padding: 5px;
+    border-radius: 5px;
+    width: 25px;
+    height: 20px;
+}
+
+.font .font-names, .font .font-size {
+    position: relative;
+    bottom: 3px;
+    width: 140px;
+    margin-right: 10px;
+    border-radius: 5px;
+    height: 30px;
+    background-color: var(--pem-text-emph-button-bg);
+    color: var(--pem-text-emph-button);
+}
+
+.font .font-size {
+    width: 40px;
+}
+
+.typo-emph #save-button {
+    background-color: #8a34a4;
+    color: white;
+}
+
+.typo-emph #save-button:hover {
+    transition: ease-in-out .2s;
+    filter: brightness(115%);
+    cursor: pointer;
+}
+
+.title {
+    position: absolute;
+    top: 72px;
+    z-index: 1;
+    height: 50px;
+}
+
+.title div {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    border-radius: 100px;
+    background-color: #8833a2;
+    vertical-align: middle;
+}
+
+.title h1 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 50px;
+    width: 1020px;
+	word-break: break-all;
+    z-index: 1;
+    color: var(--main-text-light);
+}
+
+.reminder-top {
+    position: absolute;
+    left: 1180px;
+    top: 84px;
+}
+
+.reminder-top h2 {
+    vertical-align: middle;
+    font-size: 35px;
+    color: var(--main-text-light);
+}
+
+.reminder-top button {
+    all: unset;
+    position: relative;
+    vertical-align: middle;
+    margin: 0 15px;
+    padding: 5px;
+    left: 180px;
+    bottom: 40px;
+    width: 25px;
+    height: 25px;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 18px;
+    background-color: #8833a2;
+    color: white;
+}
+
+.reminder-top button:hover {
+    transition: ease-in-out .2s;
+    filter: brightness(115%);
+    cursor: pointer;
+}
+
+.in-display {
+    position: relative;
+    margin: 20px auto;
+    width: 650px;
+    height: 95px;
+    border-radius: 20px;
+    background-color: var(--card-bg-light);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
+}
+
+.buttons {
+    position: relative;
+    right: 15px;
+    float: right;
+}
+
+.buttons button {
+    border: 2px solid var(--dark-purp1);
+    background-color: transparent;
+    border-radius: 100px;
+}
+
+.buttons i {
+    font-size: 20px;
+    color: var(--dark-purp1);
+}
+
+.buttons button, 
+.buttons img {
+    position: relative;
+    top: 7px;
+    width: 46px;
+    height: 46px;
+    margin: 0 6px;
+}
+
+.buttons img{
+    width: 46px;
+    height: 46px;
+    position: relative;
+    top: 23px;
+    border:none;
+    outline:none;
+}
+
+.buttons button:hover {
+    transition: ease-in-out .2s;
+    filter: brightness(108%);
+    cursor: pointer;
+}
+
+.date-display{
+    display: inline-block;
+    position: relative;
+    top: 15px;
+    left: 15px;
+    background-color: #8833a2;
+    width: 65px;
+    height: 65px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+}
+
+.date-display h3 {
+    text-align: left;
+    font-weight: lighter;
+    font-size: 18px;
+    padding: 2px 0 0 10px;
+    padding-bottom: 0;
+}
+
+.date-display span {
+    position: relative;
+    font-size: 40px;
+    right: 1px;
+    padding: 10px;
+    bottom: 10px;
+    font-weight: 700;
+}
+
+.reminder-info {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    line-height: 30px;
+    padding-left: 40px;
+    color: var(--main-text-light);
+}
+
+.reminder-info h2{
+    font-size: 25px;
+    position: relative;
+    top: -10px;
+    left: -10px;
+    font-weight: normal;
+}
+
+.size {
+    box-sizing: border-box;
+    border: 15px solid transparent;
+    position: absolute;
+    left: 1135px;
+    top: 120px;
+    height: 86vh;
+    width: 760px;
+    overflow: auto;
+    overflow-x: hidden;
+    padding: 0 20px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: var(--scrollbar-light);
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: 12px;
+    background-color: transparent;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #8833a2;
+}
+
+@media screen and (max-width: 1135px){
+    .top-bar{
+        width: 700px;
+        height: 95px;
+    }
+
+    #white-bg {
+        width: 700px;
+    }
+
+    .title {
+        top: 110px;
+        width: 700px;
+    }
+
+    .title h1 {
+        font-size: 30px;
+        width: 610px;
+    }
+
+    iframe {
+        top: 250px;
+        width: 700px;
+    }
+
+    .split1 {
+        display: block;
+    }
+
+    .size{
+        left: 690px;
+    }
+
+    .reminder-top {
+        left: 734px;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .top-bar{
+        width: 500px;
+        height: 135px;
+    }
+
+    #white-bg {
+        width: 500px;
+        bottom: 20px;
+        height: 959px;
+    }
+
+    .title {
+        top: 150px;
+        width: 400px;
+        
+    }
+
+	.title h1 {
+        font-size: 24px;
+        width: 345px;
+    }
+
+    iframe {
+        top: 300px;
+        width: 500px;
+    }
+
+    .split2{
+        display: block;
+        margin-left: 0;
+    }
+
+    .size {
+        top: 195px;
+        left: 490px;
+        height: 800px;
+    }
+
+    .reminder-top {
+        top: 115px;
+        left: 535px;
+    }
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: none; /* Enable scroll if needed */
+  }
+  
+  /* Modal Content/Box */
+.modal-content {
+	z-index: 999;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--card-bg-light);
+    margin: 120px auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    width: 20%; /* Could be more or less, depending on screen size */
+    min-width: 300px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
+}
+
+.modal-content h2 {
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-size: 25px;
+    color: var(--main-text-light);
+}
+
+.error-msg{
+  margin: 20px;
+  word-wrap: break-word;
+  font-size: 0.75vw;
+  color: var(--main-subtext-light);
+  font-style: italic;
+  font-size: 15px;
+}
+  
+  /* The Close Button */
+.close {
+    color: var(--main-subtext-light);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--main-text-light);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.rem-name-div input[type="text"] {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0.45rem 0;
+    text-align: center;
+    font-size: 15px;
+    border-bottom: 2px solid var(--extra-border1);
+    box-shadow: none;
+    color: var(--main-text-light);
+}
+
+.rem-name-div label {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    color: var(--main-subtext-light);
+    cursor: text;
+    font-size: 20px;
+    top: 238px;
+}
+
+/* Removes the clear button from date inputs */
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+/* Removes the spin button */
+input[type="date"]::-webkit-inner-spin-button { 
+    display: none;
+}
+
+/* Always display the drop down caret */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: var(--main-subtext-light);
+}
+
+/* A few custom styles for date inputs */
+input[type="date"] {
+    appearance: none;
+    color: var(--date-color);
+    font-family: "Helvetica", arial, sans-serif;
+    font-size: 20px;
+    border: none;
+    background:var(--date-color-bg);
+    margin-top: 20px;
+    padding: 5px;
+    display: block;
+    border-radius: 7px;
+    text-align: right;
+    margin: auto;
+}
+
+input[type="date"]:hover,
+input[type="date"]:focus {
+    transition: ease-in-out .2s;
+    cursor: pointer;
+    filter: brightness(90%);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover,
+input[type="date"]::-webkit-calendar-picker-indicator:focus {
+    cursor: pointer;
+}
+
+.datepicker{
+    padding-top: 10px;
+}
+
+.date-q {
+    font-size: 20px;
+    color: var(--main-subtext-light);
+    padding-bottom: 18px;
+}
+
+.pad-under {
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+/* The container */
+.radio-inline {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--main-subtext-light);
+  }
+  
+  /* Hide the browser's default radio button */
+  .radio-inline input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--radio-bg-pem);
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .radio-inline:hover input ~ .checkmark {
+    transition: ease-in-out .15s;
+    filter: brightness(90%);
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .radio-inline input:checked ~ .checkmark {
+    transition: ease-in-out .15s;
+    background-color: #8833a2;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .radio-inline input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.popup-buttons{
+    font-size: 90%;
+    font-weight: 700;
+    width: 40%;
+    margin: 15px 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    color: #AAA;
+}
+
+.popup-buttons:hover{
+    transition: ease-in-out .2s;
+    filter: brightness(90%);
+}
+
+.modal-content input[type="text"]{
+    background-color: var(--card-bg-light);
+}
+  
+.modal-content input[type="reset"] {
+    background-color: var(--cancel-but);
+    color: var(--main-text-light);
+}
+
+#create-button {
+    color: white;
+    background-color: #8833a2;
+}
+
+#create-button:hover {
+    transition: ease-in-out .2s;
+    filter: brightness(110%);
+}
+
+/* IF NO DATE */
+.date-display i {
+    position: relative;
+    top: 14px;
+    font-size: 35px;
+}
+
+.reminder-info-2 {
+    display: inline-block;
+    position: relative;
+    top: 25px;
+    left: 31px;
+}
+
+.reminder-info-2 h2 {
+    font-weight: normal;
+    font-size: 25px;
+    color: var(--main-text-light);
+}
+
+.completed h2 {
+    color: var(--main-p-text-light);
+}
+
+.completed .checked-but {
+    background-color: var(--bg-complete);
+    cursor: default;
+    pointer-events: none;
+}
+
+.completed h2 {
+    color: var(--completed-header);
+}
+
+.checked-but i {
+    color: var(--wht-purp);
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+.empty {
+    background-color: var(--nothing-bg);
+    position: relative;
+    left: 13px;
+    width: 100%;
+    height: 50%;
+    margin-top: 10px;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 19em;
+    color: var(--nothing-txt);
+    font-size: 20px;
+    font-style: oblique;
+    box-shadow: inset 0px -2px 22px -8px rgba(0, 0, 0, 0.164);
+}

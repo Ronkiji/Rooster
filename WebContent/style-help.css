@@ -1,0 +1,605 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Ebrima;
+  src: url(http://www.theamazingmonth.pusku.com/ebrima.ttf);
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family:  Ebrima, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  background-color: var(--main-bg-light);
+  color: var(--main-text-light);
+}
+
+.top {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  background-image: var(--meeting-bg);
+  color: white;
+  width: 100%;
+  height: 530px;
+}
+
+.top h1{
+  position: relative;
+  top: 145px;
+  font-size: 50px;
+}
+
+.top p {
+  position: relative;
+  top: 150px;
+  padding-top: 10px;
+  font-size: 16px;
+}
+
+.anchor-box {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  top: 185px;
+  text-align: center;
+}
+
+.anchor-box a {
+  margin: 0 10px;
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 200px;
+  height: 150px;
+  background-color: var(--card-bg-light);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.178);
+  text-decoration: none;
+  color: var(--main-text-light);
+}
+
+.anchor-box a:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.178);
+  transition: 0.3s; 
+}
+
+.anchor-box a i {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 50px;
+}
+
+.spc {
+  position: relative;
+  top: 5px;
+}
+
+.anchor-box a h3 {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--alt-text-color2);
+}
+
+.stack {
+  display: inline-block;
+}
+
+.col-container {
+  position: relative;
+  top: 530px;
+  text-align: center;
+  background-color: var(--bg-switch);
+}
+
+.col-container h1 {
+  position: relative;
+  font-size: 35px;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+.col-container h3 {
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 25px;
+}
+
+.accordion {
+  font-weight: 600;
+  background-color: var(--card-bg-light);
+  color: var(--alt-text-color);
+  cursor: pointer;
+  padding: 18px;
+  width: 900px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  position: relative;
+  border-bottom: solid 2px var(--extra-border1);
+  line-height: 23px;
+}
+
+.active, .accordion:hover {
+  color: var(--extra-purp4); /* OR 8833a2*/
+  border-bottom: solid 2px var(--dark-purp1);
+}
+
+.accordion:after {
+  content: '\002B';
+  font-size: 20px;
+  color: var(--extra-purp5);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: var(--card-bg-light);
+  max-height: 0;
+  word-wrap: break-word;
+  overflow: hidden;
+  width: 864px;
+  transition: max-height 0.2s ease-out;
+  position: relative;
+  margin: auto;
+}
+
+.panel p {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.panel a {
+  color: var(--extra-purp5); 
+}
+
+.pad {
+  padding-bottom: 60px;
+}
+
+.more {
+  position: relative;
+  top: 530px;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.more h1 {
+  font-size: 35px;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+
+.more h3 {
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+.more .contact {
+  display: inline-block;
+  width: 410px;
+  height: 200px;
+  background-color: var(--card-bg-light);
+  margin: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.178);
+  text-align: left;
+}
+
+.more .contact i {
+  font-size: 100px;
+  position: relative;
+  top: 50px;
+  left: 36px;
+}
+
+.more .contact h2 {
+  position: relative;
+  font-size: 22px;
+}
+
+.more .contact div {
+  position: relative;
+  left: 190px;
+  bottom: 60px;
+  width: 180px;
+}
+
+.more .contact div p {
+  padding-top: 10px;
+  font-size: 15px;
+}
+
+#lock {
+  position: relative;
+  left: 50px;
+}
+
+.nav-sec {
+  width: 100%;
+  height: 500px;
+  background-color: var(--bg-switch);
+  position: relative;
+  top: 540px;
+  text-align: center;
+}
+
+.nav-sec h1 {
+  font-size: 35px;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+.nav-sec h3 {
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 25px;
+}
+
+.slides {
+  display: none
+
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 350px;
+  position: relative;
+  right: 145px;
+  margin: auto;
+}
+
+.arrows {
+  position: relative;
+  bottom: 365px;
+  right: 63px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  padding: 8px;
+  color: #8833a2;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 3px;
+  user-select: none;
+  top: 170px;
+  right: 200px;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  color: #d1a4df;
+  background-color: #8833a2;
+}
+
+/* Caption text */
+.text {
+  color: var(--main-text-light);
+  font-size: 15px;
+  padding: 8px 12px;
+  position: relative;
+  bottom: 185px;
+  left: 370px;
+  text-align: left;
+}
+
+.text h2 {
+  color: var(--main-text-light);
+  padding-bottom: 10px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  background-color: #8833a2;
+  border-radius: 100px;
+  text-align: center;
+  position: relative;
+  bottom: 205px;
+  right: 145px;
+}
+
+.active2, .dot:hover {
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
+  color: #d1a4df;
+  background-color: #d1a4df;
+}
+
+.pro-sec {
+  width: 100%;
+  height: 1320px;
+  position: relative;
+  top: 540px;
+  text-align: center;
+}
+
+.pro-sec h1 {
+  font-size: 35px;
+  padding-top: 70px;
+  padding-bottom: 10px;
+}
+
+.pro-sec h3 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.step {
+  margin-top: 40px;
+}
+
+.step div{
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  font-size: 31px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--main-l-purp-light);
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.step h2 {
+  font-size: 25px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.step p {
+  margin: 10px 10px 20px;
+}
+
+.step img {
+  width: 700px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.178);
+}
+
+.rem {
+  background-color: var(--bg-switch);
+  width: 100%;
+  height: 950px;
+  position: relative;
+  top: 900px;
+  padding-top: 50px;
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.rem h1 {
+  font-size: 35px;
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+
+.rem h3 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.rem .section {
+  margin: auto;
+  text-align: center;
+  width: 600px;
+}
+
+.rem .section i {
+  font-size: 35px;
+  padding: 20px;
+  border-radius: 100px;
+  border: 5px solid var(--dark-purp1);
+  margin: 34px 0 20px;
+  background-color: var(--bg-help);
+}
+
+.tr {
+  padding: 18px 20px !important;
+}
+
+#od {
+  width: 75px;
+  padding-top: 34px;
+  padding-bottom: 20px;
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.rem .section p {
+  padding: 10px 20px;
+}
+
+.developers{
+  margin-top: 50px;
+  padding: 50px;
+  background-color: var(--main-bg-light);
+}
+
+.developers .title h1 {
+  font-size: 35px;
+  padding-bottom: 10px;
+}
+
+.developers .title p{
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+
+.developers .dev{
+  display: inline-block;
+  padding: 5px 20px;
+}
+
+.developers .dev img{
+  width: 80px;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+
+#sb {
+  content: var(--sunnyboi);
+}
+
+.developers .dev div{
+  display: inline-block;
+  text-align: left;
+  position: relative;
+  top: 17px;
+}
+
+.developers .dev div a{
+  text-decoration: none;
+  color: var(--extra-purp5);
+  padding-top: 5px;
+}
+
+.developers .dev h2{
+  padding-bottom: 0px;
+}
+
+@media screen and (max-width: 910px){
+  .col-container {
+    top: 570px;
+  }
+
+  .col-container h1 {
+    font-size: 30px;
+    padding-top: 30px;
+  }
+
+  .stack {
+    display: block;
+  }
+
+  .accordion {
+    top: 30px;
+    width: 483px;
+  }
+
+  .panel {
+    top: 30px;
+    width: 447px;
+  }
+
+  .top {
+    height: 570px;
+  }
+
+  .top h1{
+    top: 120px;
+    font-size: 30px;
+  }
+  
+  .top p {
+    top: 130px;
+  }
+
+  .anchor-box {
+    top: 160px;
+  }
+
+  .anchor-box a {
+    width: 150px;
+    height: 130px;
+  }
+
+  .anchor-box img, .anchor-box a h3 {
+    position: relative;
+    bottom: 10px;
+  }
+
+  .more {
+    position: relative;
+    top: 570px;
+  }
+
+  .slideshow-container {
+    right: 0;
+  }
+
+  .arrows {
+    right: 63px;
+  }
+
+  .dot {
+    right: 0px;
+  }
+
+  .text {
+    top: 20px;
+    left: 0px;
+    text-align: center;
+  }
+
+  .nav-sec {
+    height: 600px
+  }
+
+  .step img {
+    width: 450px;
+  }
+
+  .rem {
+    top: 590px;
+  }
+
+  .rem .section {
+    width: 450px;
+  }
+
+  .sun {
+    position: relative;
+    right: 15px;
+    
+  }
+
+  .developers .dev{
+    display: block;
+    padding: 10px;
+  }
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}

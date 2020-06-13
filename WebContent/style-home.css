@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+      -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+                                  user-drag: none;
+                                  -webkit-user-drag: none;
+                                  
+}
+
+@font-face {
+    font-family: Ebrima;
+    src: url(http://www.theamazingmonth.pusku.com/ebrima.ttf);
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family:  Ebrima, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    background-color: var(--main-bg-light);
+}
+
+.main-page,
+.upcoming-display{
+    color: var(--main-text-light);
+    position: absolute;
+    left: 52%;
+    top: 120px;
+    padding: 5px;
+}
+
+.main-page h1, 
+.upcoming-display h1{
+    font-size: 50px;
+    padding-bottom: 30px;
+    font-weight: lighter;
+}
+
+.main-page a{
+    display: inline-block;
+    text-align: center;
+    color: white;
+    background-color: var(--main-l-purp-light);
+    text-decoration: none;
+    padding: 15px 30px;
+    margin: 0 30px 20px 0;
+    border-radius: 100px;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.main-page a:hover{
+    transition: background .3s;
+    background-color: var(--l-purp-hover-light);
+}
+
+.greeting{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+
+.greeting img{
+    position: relative;
+    top: 140px;
+    padding: 15px;
+    width: 35%;
+    border-radius: 9999px;
+}
+
+.greeting h1{
+    position: relative;
+    top: 150px;
+    word-break: break-all;
+    font-size: 2.7vw;
+    word-wrap: break-word;
+    font-weight: normal;
+    padding: 5px 15px;
+    color: var(--main-text-light);
+}
+
+.interaction-option{
+    display: inline-block;
+    position: relative;
+    border: none;
+    top: 190px;
+    width: 30%;
+    height: 220px;
+    padding: 20px;
+    margin: 0 2.5%;
+    text-align: left;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.329);
+    text-decoration: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.interaction-option h2{
+    position: relative;
+    margin-top: 18px;
+    font-weight: 700;
+    text-align: left;
+    font-size: 20px;
+}
+
+.interaction-option p{
+    position: relative;
+    margin-top: 0.5vh;
+    font-weight: 500;
+    text-align: left;
+    font-size: 15px;
+}
+
+.interaction-option a{
+    position: relative;
+    text-align: center;
+    top: 12vh;
+}
+
+.dark-mode-display{
+    background-image: var(--dark-light-sml);
+    color: white;
+}
+
+.help-page-display{
+    background-image: var(--help-sml);
+    color: var(--main-text-light);
+}
+
+@media screen and (max-width: 1000px){
+    .help-page-display p{
+        background-color: var(--help-text-bg);
+    }
+}
+
+.dark-mode-display:hover, 
+.help-page-display:hover{
+    filter: brightness(115%);
+    transition: all .3s ease;
+}
+
+.upcoming-display{
+    top: 308px;
+    padding-right: 50px;
+}
+
+.upcoming-display h1{
+    padding-bottom: 0;
+}
+
+.in-display {
+    position: relative;
+    margin: 20px auto;
+    width: 820px;
+    height: 110px;
+    border-radius: 20px;
+    background-color: var(--card-bg-light);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
+}
+
+.buttons {
+    position: relative;
+    top: 12px;
+    right: 25px;
+    float: right;
+}
+
+.buttons button {
+    border: 2px solid var(--dark-purp1);
+    background-color: transparent;
+    border-radius: 100px;
+}
+
+.buttons i {
+    font-size: 26px;
+    color: var(--dark-purp1);
+}
+
+.buttons button, 
+.buttons img {
+    width: 55px;
+    height: 55px;
+    margin: 0 6px;
+}
+
+.buttons img{
+	width: 55px;
+    height: 55px;
+    position: relative;
+    top: 18px;
+    border:none;
+    outline:none;
+}
+
+.buttons button:hover {
+    transition: ease-in-out .2s;
+    filter: brightness(108%);
+    cursor: pointer;
+}
+
+.date-display{
+    display: inline-block;
+    position: relative;
+    top: 15px;
+    left: 15px;
+    background-color: #6f2b90;
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+}
+
+.date-display h3{
+    text-align: left;
+    font-weight: lighter;
+    padding: 2px 0 0 10px;
+    padding-bottom: 0;
+}
+
+.date-display span {
+    position: relative;
+    font-size: 50px;
+    padding: 10px;
+    bottom: 10px;
+    font-weight: 700;
+}
+
+.reminder-info {
+    display: inline-block;
+    position: relative;
+    top: 15px;
+    line-height: 36px;
+    padding-left: 40px;
+    width:  455px;
+    white-space: nowrap;
+    
+}
+
+.reminder-info h2{
+    font-size: 35px;
+    font-weight: normal;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+.reminder-info p{
+    font-size: 18px;
+    font-style: oblique;
+    color: var(--main-p-text-light);
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 970px){
+    .main-page h1, 
+    .upcoming-display h1{
+        font-size: 30px;
+    }
+
+    .main-page h1{
+        padding-bottom: 15px;
+    }
+
+    .upcoming-display h1{
+        padding-top: 0px;
+    }
+
+    .main-page a{
+        margin-bottom: 10px;
+        font-size: 15px;
+        display: block;
+    }
+    .greeting h1{
+        margin: auto;
+        width: 180px;
+        font-size: 25px;
+        word-wrap: break-word;
+    }
+    .greeting img{
+        width: 130px;
+    }
+
+    .greeting h1{
+        padding: 0;
+    }
+
+    .interaction-option{ 
+        height: 180px;
+    }
+}
+
+  /* IF NO DATE */
+.date-display i {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 45px;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+.empty {
+    background-color: var(--nothing-bg);
+    width: 800px;
+    height: 505px;
+    margin-top: 20px;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 23em;
+    color: var(--nothing-txt);
+    font-size: 20px;
+    font-style: oblique;
+    box-shadow: inset 0px -2px 22px -8px rgba(0, 0, 0, 0.219);
+}

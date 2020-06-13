@@ -1,0 +1,430 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+  font-family: Ebrima;
+  src: url(http://www.theamazingmonth.pusku.com/ebrima.ttf);
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family:  Ebrima, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+.header{
+  background: url("assets/Background_Image_Landing.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100%;
+}
+
+.header .container{
+  position: relative;
+  top: 12vw;
+  text-align: center;
+  height: 80%;
+  width: auto;
+}
+
+.container #slogan{
+  display: block;
+  padding: 50px 50px;
+  margin: auto;
+  max-width: 80%; 
+  height: auto;
+}
+
+@media screen and (min-width: 800px) and (max-height: 700px) {
+  .container #slogan {
+    width: 30%; 
+  }
+  .modal-button {
+    margin: 10px 10px;
+    padding: 0.4rem 0.5rem;
+    font-size: 20px;
+    border: 3px solid white;
+    position: block;
+  }
+  .container #slogan {
+    padding-top: 30px;
+    padding: 20px 50px;
+  }
+  .header {
+    min-height: 650px;
+  }
+}
+
+.container #logowhite{
+  display: block;
+  height: 6vw;
+  min-height: 70px;
+  margin: auto;
+}
+
+.modal-title{
+  text-align: center;
+  width: 100%;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.modal #logo-word{
+  width: 70%;
+  height: auto;
+}
+
+.modal #logo-icon{
+  width: 20%;
+  height: auto;
+}
+
+@media screen and (max-width: 1250px) {
+  .modal-title {
+    font-size: 20px;
+  }
+}
+
+.modal-button{
+  display: inline-block;
+  margin: 20px 20px;
+  padding: 1rem 3rem;
+  width: 250px;
+  min-height: 2vh;
+
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
+  border-radius: 100px;
+  color: white;
+  background-color: transparent;
+  border: 5px solid white;
+}
+
+@media screen and (max-height: 600px) {
+  .modal-button {
+    margin: 10px 10px;
+    padding: 0.4rem 0.5rem;
+    font-size: 20px;
+    border: 3px solid white;
+    position: block;
+  }
+  .container #slogan{
+    padding-top: 30px;
+    padding: 20px 50px;
+  }
+  .header{
+    min-height: 650px;
+  }
+}
+
+.modal-button:hover{
+  transition: background .35s;
+  color: #8833a2;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: none; /* Enable scroll if needed */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  text-align: center;
+  justify-content: center;
+  background-color: white;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  width: 20%; /* Could be more or less, depending on screen size */
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
+}
+
+.error-msg{
+  margin: 20px;
+  word-wrap: break-word;
+  font-size: 0.75vw;
+  color: #AAA;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.popup-buttons{
+  font-size: 90%;
+  font-weight: 700;
+  width: 40%;
+  margin: 10px 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 950px){
+  .popup-buttons {
+    font-size: 1.3vw;
+  }
+}
+
+.confirm {
+  background-color: #8833a2;
+  color: white;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-inputs label {
+  position: absolute;
+  top: 60;
+  left: 0;
+  width: 100%;
+  color: #d3d3d3;
+  transition: 0.2s all;
+  cursor: text;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.modal-inputs input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #d3d3d3;
+  box-shadow: none;
+  color: #111;
+}
+
+.modal-inputs input:invalid {
+  outline: 0;
+}
+
+.modal-inputs input:focus,
+input:valid {
+  border-color: #8833a2;
+}
+
+input:focus~label,
+input:valid~label {
+  font-size: 18px;
+  transform: translate(0px, -18px);
+  color: #8833a2;
+}
+
+.intro{
+  position: absolute;
+  color: #26282a;
+  text-align: center;
+}
+
+.intro-text{
+  display: inline-block;
+  width: 26%;
+  padding: 50px 35px;
+  line-height: 30px;
+  text-align: left;
+}
+
+.intro div h1{
+  font-size: 50px;
+}
+
+.intro div h2{
+  padding-bottom: 10px;
+  font-size: 28px;
+  line-height: 50px;
+}
+
+.intro div p{
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.rooster-steps{
+  padding-bottom: 50px;
+  background-color: #f8f7f8;
+}
+
+.rooster-steps h1{
+  padding: 50px;
+}
+
+.rooster-steps .step{
+  padding: 30px;
+  display: inline-block;
+}
+
+.step img{
+  width: 25%;
+  padding: 15px;
+}
+
+.step .beg {
+  text-transform: lowercase;
+  font-size: 24px;
+}
+
+.step span{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.ui-intro{
+  padding-bottom: 60px;
+}
+.ui-intro .title{
+  padding-top: 50px;
+}
+
+.ui-intro .title p{
+  padding-top: 15px;
+}
+
+.ui-intro img{
+  width: 350px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.ui-intro div{
+  padding: 30px 10px;
+}
+
+.ui-intro div div{
+  text-align: left;
+  display: inline-block;
+  width: 25%; 
+  vertical-align: middle;
+}
+
+.ui-intro div h2{
+  padding: 10px 0;   
+}
+
+.ui-intro div .left{
+  padding-right: 50px;
+}
+
+.ui-intro div .right{
+  padding-left: 50px;
+}
+
+@media screen and (max-width: 700px){
+  .ui-intro img{
+    margin: auto;
+    display: block;
+    width: 200px;
+  }
+  .ui-intro div div{
+    text-align: center;
+    margin: auto;
+    display: block;
+    width: 400px;
+  }
+
+  .ui-intro div .left{
+    padding-right: 0;
+  }
+  .ui-intro div .right{
+    padding-left: 0;
+  }
+}
+
+.developers{
+  padding: 50px;
+  background-color: #f8f7f8;
+}
+
+.developers .title p{
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+.developers .dev{
+  display: inline-block;
+  padding: 20px;
+}
+
+.developers .dev img{
+  width: 150px;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+
+.developers .dev div{
+  display: inline-block;
+  text-align: left;
+}
+
+.developers .dev h2{
+  padding-bottom: 0px;
+}
+
+.start{
+  background-color: #600f79;
+  height: 100px;
+  line-height: 100px;
+  width: 100%;
+  text-align: center;
+}
+
+.start span{
+  color: white;
+  padding-right: 30px;
+  font-size: 20px;
+}
+
+.start a{
+  color: white;
+  background-color: #953bb1;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 100px;
+}
+
+.start a:hover{
+  transition: background .35s;
+  background-color: #ad4dca;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}

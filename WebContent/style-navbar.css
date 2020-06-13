@@ -1,0 +1,366 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Ebrima;
+  src: url(http://www.theamazingmonth.pusku.com/ebrima.ttf);
+}  
+
+body, html {
+  background: var(--main-bg-light);
+  height: 100%;
+  width: 100%;
+  font-family: Ebrima, Helvetica, sans-serif;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  font-family: Ebrima, Helvetica, sans-serif;
+  text-align: center;
+  z-index: 9999;
+}
+
+.navbar-logo {
+  padding: 10px;
+  width: 125px;
+  height: auto;
+  transform: translate(-6vw, 0);
+}
+
+@media screen and (max-width: 1400px) {
+  .navbar-logo {
+    transform: translate(0, 0);
+  }
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--main-l-purp-dark);
+}
+
+.navbar ul span{
+  line-height: 0; 
+  font-size: 0;
+  color: transparent;
+}
+
+.navbar ul li:nth-child(5), 
+.navbar ul li:nth-child(6), 
+.navbar ul li:nth-child(7) {
+  float: right;
+}
+
+@media screen and (max-width: 900px) {
+  .navbar-logo {
+    display: none;
+  }
+}
+
+.navbar .navbutton{
+  margin: 0;
+}
+
+.navbar ul li img{
+  height: 40px;
+  width: auto;
+  border-radius: 100px;
+}
+
+.navbar li {
+  display: flex;
+  justify-content: flex-end;
+  float: left;
+}
+
+.navbar li a, .navbar li button, .dropbtn {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.dropdown-content {
+  top: 72px;
+  transition: background .3s;
+  right: 0;
+  display: inline-block;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
+  background-color: var(--main-l-purp-dark);
+}
+
+ul a:hover:not(.logo-link),
+.navbar li button:hover,
+.dropdown-content a:hover {
+  filter: brightness(130%);
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+
+.navbar li.dropdown {
+  color: black;
+}
+
+.navbar .dropdown-content {
+  display: none;
+  position: absolute;
+  color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content button {
+  outline: none;
+  border: none;
+  width: 100%;
+  background-color: none;
+  background-color: var(--main-l-purp-dark);
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.dropdown-content button:hover {
+  transition: ease-in-out .2s;
+  background-color: var(--l-purp-hover-light);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: left;
+  line-height: 75px;
+  margin-left: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+#check{
+  display: none;
+}
+
+@media screen and (max-width: 704px){
+  nav {
+    width: 100%;
+    height: 72px;
+    background-color: var(--main-l-purp-dark);
+  }
+
+  .checkbtn{
+    display: block;
+  }
+
+  .navbar ul li:nth-child(5), 
+  .navbar ul li:nth-child(6), 
+  .navbar ul li:nth-child(7){
+    float: none;
+  }
+
+  .navbar ul{
+    position: fixed;
+    flex-direction: column;
+    display: flex;
+
+    width: 100%;
+    height: 100vh;
+
+    background: var(--extra-purp1);
+    top: 70px;
+    left: -100%;
+    text-align: center;
+    transition: all .3s;
+  }
+
+  .navbar ul li a img{
+    display: none;
+  }
+
+  .navbar ul li {
+    all: unset;
+  }
+
+  ul li:nth-child(5) {
+    order: 6;
+  }
+
+  ul li:nth-child(6) {
+    order: 5;
+  }
+
+  .navbar ul li a span{ 
+    line-height: 40px;
+    font-size: 24px;
+    color: white;
+  }
+
+  .navbar ul li a:hover,
+  .dropdown:hover,
+  .dropbtn {
+    background: var(--main-l-purp-light);
+  }
+
+  .navbar a {
+    float: none;
+    text-align: left;
+  }
+
+  .navbar .dropdown-content {
+    width: 100%;
+    top: 405px;
+    box-shadow: none;
+  }
+
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: none; /* Enable scroll if needed */
+}
+
+/* Modal Content/Box */
+.modal-content-nav {
+  text-align: center;
+  justify-content: center;
+  background-color: var(--card-bg-light);
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  width: 20%; /* Could be more or less, depending on screen size */
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
+}
+
+
+/* The Modal (background) */
+.modal-nav {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: none; /* Enable scroll if needed */
+}
+
+/* Modal Content/Box */
+.modal-content-nav {
+  text-align: center;
+  justify-content: center;
+  background-color: var(--card-bg-light);
+  margin: 120px auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  width: 20%; /* Could be more or less, depending on screen size */
+  min-width: 300px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
+}
+
+.modal-content-nav h1 {
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom:15px;
+  font-size: 25px;
+  color: var(--main-text-light);
+}
+
+.modal-content-nav p {
+  color: var(--main-subtext-light);
+}
+
+.modal-content-nav input[type="text"]{
+  background-color: var(--card-bg-light);
+}
+
+.modal-content-nav input[type="reset"] {
+  background-color: var(--cancel-but);
+  color: var(--main-text-light);
+}
+
+.nav-text {
+  width: 80%;
+  border: 0;
+  outline: 0;
+  padding: 0.45rem 0;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 15px;
+  border-bottom: 2px solid var(--extra-border1);
+  box-shadow: none;
+  color: var(--main-text-light);
+}
+
+nav .error-msg{
+  margin: 20px;
+  word-wrap: break-word;
+  font-size: 0.75vw;
+  color: var(--main-subtext-light);
+  font-style: italic;
+  font-size: 15px;
+}  
+
+/* The Close Button */
+.close {
+  color: var(--main-subtext-light);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--main-text-light);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popup-buttons-nav{
+  font-size: 90%;
+  font-weight: 700;
+  width: 40%;
+  margin: 10px 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  color: var(--main-subtext-ligh);
+}
+
+.confirm-nav {
+  background-color: #8833a2;
+  color: white;
+}

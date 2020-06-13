@@ -1,0 +1,112 @@
+html{
+    --main-bg-light: #fbfafc; /* TO 1d1426 */
+    --main-text-light: black; /*TO WHITE */
+    --main-l-purp-light: #8833a2; /* TO 531a65 */
+    --main-l-purp-dark: #600f79; /* TO 392447*/
+    --l-purp-hover-light: #b042d2; /* TO 5f1b74 */
+    --card-bg-light: white; /* TO 3b274b */
+    --main-p-text-light: #8a8a8a; /* TO WHITE */
+    --main-subtext-light: #AAA; /* TO WHITE */
+    
+    --scrollbar-light: #F5F5F5; /* TO 291c36 */
+    
+    --alt-text-color: #291d40; /* TO WHITE */
+    --alt-text-color2: #291d40; /* TO WHITE */
+    --extra-border1: #f0f0f0; /* TO 49305d */
+    --extra-purp1: #421650; /* TO 24132f */
+    --extra-purp2: #600f79; /* TO 49305d */
+    --extra-purp3: #600f79; /* TO 71508b */
+    --extra-purp4: #600f79;
+    --extra-purp5: #600f79;
+    --bg-switch: #f5f5f5; /* TO 261932 */
+    --bg-color-fill: transparent; /* TO WHITE */
+    --extra-border1: #d3d3d3; /* TO WHITE */
+    --date-color: #95a5a6; /* TO WHITE */
+    --date-color-bg: #ecf0f1; /* TO 6d5580 */
+
+    --pem-white: white; /* TO 6d5580 */
+
+    --pem-text-emph-button-bg: #f1f3f4; /* TO 49305d */
+    --pem-text-emph-button: #645f68; /* TO 6d5580 */
+    --radio-bg-pem: #EEE; /* TO 71508b */
+
+    --error-msg: #bc2626; /* TO WHITE */
+
+    --dark-purp1: #600f79; /* to white */
+    --cancel-but: #e9e9e9; /* to 49305d */
+    --white-top-bar: white;
+    --completed-header: #8a8a8a; 
+    --bg-complete: #600f79;
+    --bg-help: white;
+    --wht-purp: white;
+    --help-text-bg: white;
+
+    --sunnyboi: url("assets/Sunnyboi.png");
+    --new-proj: url("assets/New_Display_BG.png");
+    --meeting-bg: url("assets/Meeting.jpg");
+    --help-big: url("assets/Help_Display_BG.png");
+    --dark-light: url("assets/Dark_Display_BG.png");
+    --dark-light-sml: url("assets/Dark_Mode_Display.png");
+    --help-sml: url("assets/Help_Page_Display.png");
+    
+    --nothing-bg: rgb(247, 247, 247);
+    --nothing-txt: rgb(90, 90, 90);
+}
+
+html[data-theme="dark"] {
+    --main-bg-light: #1d1426; /* TO 1d1426 */
+    --main-text-light: white; /*TO WHITE */
+    --main-l-purp-light: #712a87;    /* TO 531a65 */
+    --main-l-purp-dark: #3b274b; /* TO 392447*/
+    --l-purp-hover-light: #852da0; /* TO 5f1b74 */
+    --card-bg-light: #3b274b; /* TO 3b274b */
+    --overlay-text-light: white;
+    --main-p-text-light: white; /* TO WHITE */
+    --main-subtext-light: white; /* TO WHITE */
+    
+    --scrollbar-light: #3a2c49; /* TO 291c36 */
+    
+    --alt-text-color: #a98ebd; /* TO WHITE */
+    --alt-text-color2: white; /* TO WHITE */
+    --extra-border1: #b080d3; /* TO 49305d */
+    --extra-purp1: #24132f; /* TO 24132f */
+    --extra-purp2: #49305d; /* TO 49305d */
+    --extra-purp3: #71508b; /* TO 71508b */
+    --extra-purp4: white;
+    --extra-purp5: #c397e4;
+    --bg-switch: #261932; /* TO 261932 */
+    --bg-color-fill: white; /* TO WHITE */
+    --extra-border1: #b080d3; /* TO WHITE */
+    --date-color: white; /* TO WHITE */
+    --date-color-bg: #6d5580; /* TO 6d5580 */
+
+    --pem-text-emph-button-bg: #6e4b88; /* TO 49305d */
+    --pem-text-emph-button: white; /* TO 6d5580 */
+    --radio-bg-pem: #6d5580; /* TO 71508b */
+
+    --error-msg: white; /* TO WHITE */
+
+    --dark-display-overlay: white;
+    --help-text-bg: #4a305e;
+
+    --dark-purp1: white; /* to white */
+    --cancel-but: #815f9d; /* to 49305d */
+
+    --pem-white: #2F1F3C; /* TO 6d5580 */
+    --white-top-bar: #482d5b;
+    --completed-header: #a99ab6;
+    --bg-complete: white;
+    --bg-help: transparent;
+    --wht-purp: #3b274b;
+
+    --sunnyboi: url("assets/DM_Sunnyboi.png");
+    --new-proj: url("assets/DM_New_Display_BG.png");
+    --meeting-bg: url("assets/DM_Meeting.png");
+    --help-big: url("assets/DM_Help_Display_BG.png");
+    --dark-light: url("assets/Light_Display_BG.png");
+    --dark-light-sml: url("assets/Light_Mode_Display.png");
+    --help-sml: url("assets/DM_Help_Page_Display.png");
+    
+    --nothing-bg: #3b274b;
+    --nothing-txt: #a99ab6;
+}

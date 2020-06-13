@@ -1,0 +1,81 @@
+/* The Modal (background) */
+.modal-rem {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: none; /* Enable scroll if needed */
+    z-index: 999;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content-rem {
+    text-align: center;
+    justify-content: center;
+    background-color: var(--card-bg-light);
+    margin: 120px auto;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    width: 20%; /* Could be more or less, depending on screen size */
+    min-width: 300px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.329);
+    z-index: 999;
+  }
+  
+  .modal-content-rem h1 {
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom:15px;
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--main-text-light);
+  }
+  
+  .modal-content-rem p {
+    color: var(--main-subtext-light);
+  }
+  
+  .confirm {
+    background-color: var(--main-l-purp-light);
+    color: white;
+  }
+  
+  .cancel {
+    color: var(--main-subtext-light);
+    background-color: var(--cancel-but);
+  }
+  
+   /* The Close Button */
+  .close {
+      color: var(--main-subtext-light);
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+      color: var();
+      text-decoration: none;
+      cursor: pointer;
+  }
+  
+  
+  .popup-buttons{
+      font-size: 90%;
+      font-weight: 700;
+      width: 40%;
+      margin: 15px 10px;
+      padding: 10px;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+  }
+  
+  .popup-buttons:hover{
+      transition: ease-in-out .2s;
+      filter: brightness(90%);
+  }
