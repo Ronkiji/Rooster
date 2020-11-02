@@ -52,6 +52,8 @@ public class NewProject extends HttpServlet {
 			
 			System.out.println("Project ID is: " + project.getId());
 			
+			session.setAttribute("currentProjectId", project.getId());
+			
 			response.setStatus(HttpServletResponse.SC_OK);
 			
 		} else if(status == false) {
