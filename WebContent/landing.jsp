@@ -130,7 +130,7 @@
         <div class="ui-intro">
             <div class="title">
                 <h1>Explore Rooster's Unique Features</h1>
-                <p>See what makes Rooster your best option.</p>
+                <p>See what makes Rooster your best option. Check out our <a href="https://youtu.be/KHugP8jFWr8">tutorial</a>!</p>
             </div>
 
             <br>
@@ -175,14 +175,14 @@
         <div class="developers">
             <div class="title">
                 <h1>The Development Team</h1>
-                <p>A message from the developers!</p>
+                <p>The students behind Rooster!</p>
             </div>
             <div>
                 <div class="dev">   
                     <img src="assets/Cac_The_Cactus.png">
                     <div>
                         <h2>Nicole Raitblat</h2>
-                        <p>Text here :)</p>
+                        <p>Front-end developer</p>
                     </div>
                 </div>
                 
@@ -190,7 +190,7 @@
                     <img src="assets/Sunnyboi.png">
                     <div>
                         <h2>Ronald Sun</h2>
-                        <p>Text here :)</p>
+                        <p>Back-end developer</p>
                     </div>
                 </div>
             </div>
